@@ -57,7 +57,7 @@ const schema = new mongoose.Schema(
 
 schema.virtual("age").get(function () {
   const today = new Date();
-  const dob = this.dob;
+  const dob = this.dob  as Date;
   let age = today.getFullYear() - dob.getFullYear();
 
   if (

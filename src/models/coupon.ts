@@ -1,19 +1,15 @@
 import mongoose from "mongoose";
 
-
 const schema = new mongoose.Schema({
-  code:{
-    type:String,
-    required: [true,"please enter the coupon code"],
-    // unique:true,s
+  code: {
+    type: String,
+    required: [true, "Please enter the Coupon Code"],
+    unique: true,
   },
-  amount:{
-    type:Number,
-    required: [true,"please enter the discount"],
+  amount: {
+    type: Number,
+    required: [true, "Please enter the Discount Amount"],
   },
-
 });
 
-
-
-export const Coupon = mongoose.model("Coupon",schema);
+export const Coupon = mongoose.model("Coupon", schema);
